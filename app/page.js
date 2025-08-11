@@ -1,8 +1,22 @@
+import Link from 'next/link';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
+import HeroSection from '../components/HeroSection';
+import FeatureSection from '../components/FeatureSection';
+import TestimonialSection from '../components/TestimonialSection';
+import CTASection from '../components/CTASection';
+
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-24">
-      <h1 className="text-4xl font-bold mb-6">CycleSync App</h1>
-      <p className="text-xl">Your women's health companion</p>
-    </main>
+    <div className="min-h-screen flex flex-col">
+      <Navbar />
+      <main className="flex-grow">
+        <HeroSection />
+        <FeatureSection />
+        <TestimonialSection />
+        <CTASection />
+      </main>
+      <Footer />
+    </div>
   );
 }
