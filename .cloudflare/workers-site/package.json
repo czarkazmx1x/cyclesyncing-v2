@@ -1,0 +1,12 @@
+{
+  "private": true,
+  "name": "cyclesyncing-worker",
+  "version": "1.0.0",
+  "description": "Worker for Cyclesyncing app",
+  "main": "index.js",
+  "author": "John Acosta",
+  "license": "MIT",
+  "dependencies": {
+    "@cloudflare/kv-asset-handler": "^0.3.0"
+  }
+}

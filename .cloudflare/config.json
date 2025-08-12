@@ -1,0 +1,29 @@
+{
+  "name": "cyclesyncing",
+  "version": "1.0.0",
+  "private": true,
+  "description": "CycleSync women's health app",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run cloudflare-build"
+  },
+  "build": {
+    "command": "npm run cloudflare-build",
+    "output": "out",
+    "env": {
+      "NODE_ENV": "production"
+    }
+  },
+  "functions": {
+    "api/*": {
+      "memory": 256,
+      "maxDuration": 10
+    }
+  },
+  "routes": [
+    { "src": "/api/(.*)", "dest": "/api/$1" },
+    { "src": "/_next/static/(.*)", "dest": "/_next/static/$1" },
+    { "src": "/static/(.*)", "dest": "/static/$1" },
+    { "src": "/(.*)", "dest": "/index.html" }
+  ]
+}
